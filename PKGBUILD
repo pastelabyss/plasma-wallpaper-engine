@@ -1,5 +1,5 @@
 pkgname=plasma6-wallpaperengine-git
-pkgver=0.5.4.r74.gdad1870
+pkgver=0.5.4.r78.g96230de
 pkgrel=1
 pkgdesc="A simple kde wallpaper plugin integrating wallpaper engine"
 arch=('x86_64')
