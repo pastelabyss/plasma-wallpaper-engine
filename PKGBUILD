@@ -1,10 +1,10 @@
 pkgname=plasma6-wallpaperengine-git
-pkgver=0.5.4.r78.g96230de
+pkgver=0.5.4
 pkgrel=1
 pkgdesc="A simple kde wallpaper plugin integrating wallpaper engine"
 arch=('x86_64')
-url="https://github.com/catsout/wallpaper-engine-kde-plugin"
-livense=('GPL-2.0-only')
+url="https://github.com/pastelabyss/wallpaper-engine-kde-plugin"
+license=('GPL-2.0-only')
 depends=(
     "plasma5support" "gst-libav" "python-websockets" "qt6-declarative"
     "qt6-websockets" "qt6-webchannel" "vulkan-driver" "libplasma"
@@ -53,10 +53,6 @@ prepare(){
         done
         git -c protocol.file.allow=always submodule update
     done
-}
-pkgver(){
-    cd "${srcdir}/${pkgname}"
-    git describe --tags --long | sed 's/v//;s/-/.r/;s/-/./g'
 }
 build(){
     cmake -B build -S "${srcdir}/${pkgname}" \
